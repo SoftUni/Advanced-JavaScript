@@ -1,3 +1,4 @@
+// function constuctor
 function Animal() {
 }
 
@@ -20,4 +21,6 @@ function Person(name, age) {
 }
 
 var pesho = new Person("Peter", 44);
-var minka = new Person("Minka", 18);
+var minka = Person("Minka", 18);
+console.log(pesho); // logs empty object
+console.log(minka); // logs undefined

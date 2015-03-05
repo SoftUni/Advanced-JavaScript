@@ -18,8 +18,11 @@ var calculateArea = function () {
 
 var rect = new Rect(50, 55, 15, 10);
 
-// This doesn't make closure 
+// this doesn't make closure 
 var rectCalcArea = rect.calcArea; 
 
-console.log(rectCalcArea());
-console.log(calculateArea());
+console.log(rect.calcArea()); // Logs 150
+console.log(rectCalcArea()); // Logs NaN
+console.log(calculateArea()); // Logs NaN
+console.log(calculateArea.call(rect)); // Logs 150
+console.log(rectCalcArea.call(rect)); // Logs 150

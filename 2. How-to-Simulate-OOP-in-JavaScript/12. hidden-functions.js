@@ -1,5 +1,4 @@
 var Rect = (function () {
-
 	var BORDERS = {
 		LEFT: 0,
 		RIGHT: 1000,
@@ -39,5 +38,5 @@ var Rect = (function () {
 }());
 
 
-console.log(new Rect(1, 2, 30, 30).calcArea());
-console.log(new Rect(-1, 2, 30, 30).calcArea());
+console.log(new Rect(1, 2, 30, 30).calcArea()); // Logs 900
+console.log(new Rect(-1, 2, 30, 30).calcArea()); // throw an error

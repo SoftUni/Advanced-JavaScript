@@ -25,12 +25,12 @@ Array.prototype.reverse = function () {
 
         counter--;
 
-        temp = array[counter];
-        array[counter] = array[index];
-        array[index] = temp;
+        temp = this[counter];
+        this[counter] = this[index];
+        this[index] = temp;
     }
 
-    return array;
+    return this;
 }
 
 console.log([1, 2, 3, 4, 5, 6].reverse());
