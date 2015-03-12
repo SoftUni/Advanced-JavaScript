@@ -1,4 +1,4 @@
-var getCalculator = function () {
+var calculator = (function () {
 	var logger = [];
 	function logAction(action) {
 		logger.push(action);
@@ -29,11 +29,10 @@ var getCalculator = function () {
 			return logger;
 		}
 	}
-}
+}());
 
-var calc = getCalculator();
-console.log(calc.add(2, 5)); // 2 + 5 = 7
-console.log(calc.subtract(10, 7)); // 10 - 7 = 3
-console.log(calc.multiply(15, 3)); // 15 * 3 = 45
-console.log(calc.divide(28, 4)); // 28 / 4 = 7
-console.log(calc.getLogs());
+console.log(calculator.add(2, 5)); // 2 + 5 = 7
+console.log(calculator.subtract(10, 7)); // 10 - 7 = 3
+console.log(calculator.multiply(15, 3)); // 15 * 3 = 45
+console.log(calculator.divide(28, 4)); // 28 / 4 = 7
+console.log(calculator.getLogs());
